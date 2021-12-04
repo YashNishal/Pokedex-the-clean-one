@@ -3,8 +3,6 @@ package com.example.pokedex.ui.theme
 import androidx.compose.ui.graphics.Color
 
 
-val LightBlue = Color(0xFFBAC7FF)
-val lightGrey = Color(0xFFAAAAAA)
 val background = Color(0xFFf5fbfb)
 val offBackground = Color(0xFFebf3f5)
 val darkBackground = Color(0xFF272727)

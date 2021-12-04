@@ -2,7 +2,6 @@ package com.example.pokedex.util
 
 import androidx.compose.ui.graphics.Color
 import com.example.pokedex.data.remote.response.Stat
-import com.example.pokedex.data.remote.response.Type
 import com.example.pokedex.ui.theme.*
 import java.util.*
 

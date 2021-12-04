@@ -1,15 +1,12 @@
 package com.example.pokedex.screens.PokeDetailScreen
 
-import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.CircularProgressIndicator
@@ -25,20 +22,17 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.example.pokedex.R
 import com.example.pokedex.data.remote.response.Pokemon
 import com.example.pokedex.ui.theme.*
 import com.example.pokedex.util.*
-import com.example.pokedex.util.Constants.COLOR_LIST
 import java.util.*
 
 
@@ -188,7 +182,7 @@ fun PokemonDetailSection(
                         .padding(vertical = 8.dp, horizontal = 16.dp)
                 ) {
                     Text(
-                        text = text.capitalize(Locale.ROOT),
+                        text = text.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() },
 //                        color = MaterialTheme.colors.onSurface,
                         color = MaterialTheme.colors.onPrimary,
                         fontWeight = FontWeight.SemiBold,

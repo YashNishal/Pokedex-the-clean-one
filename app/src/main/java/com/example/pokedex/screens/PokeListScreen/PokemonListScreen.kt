@@ -130,7 +130,6 @@ fun SearchBar(
 @Composable
 fun PokeGrid(
     navController: NavController,
-    modifier: Modifier = Modifier,
     viewModel: PokemonListViewModel = hiltViewModel()
 ) {
     val pokemonList by remember { viewModel.pokemonList }
@@ -172,11 +171,9 @@ fun PokeGrid(
 fun PokeItem(
     entry: PokedexListEntry,
     navController: NavController,
-    modifier: Modifier = Modifier,
     viewModel: PokemonListViewModel = hiltViewModel()
 ) {
 
-    val defaultDominantColor = MaterialTheme.colors.surface
 
     var dominantColor by remember { mutableStateOf(COLOR_LIST.random()) }
 
@@ -196,7 +193,6 @@ fun PokeItem(
 
     Column(
         verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .padding(8.dp)
             .clip(RoundedCornerShape(10.dp))
