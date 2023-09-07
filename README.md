@@ -5,5 +5,6 @@ Light Mode
 
 Dark Mode
 
-
 ![dark_mode](https://user-images.githubusercontent.com/60299459/144719359-a00261cc-9feb-425e-b6fb-844abdb72ba1.gif)
+
+<img src="https://user-images.githubusercontent.com/60299459/144719359-a00261cc-9feb-425e-b6fb-844abdb72ba1.gif" width="40" height="40" />
